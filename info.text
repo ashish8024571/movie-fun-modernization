@@ -1,0 +1,18 @@
+export VCAP_SERVICES='{"p-mysql": [{"credentials": {"jdbcUrl": "jdbc:mysql://127.0.0.1:3306/albums?user=root"}, "name": "albums-mysql"}, {"credentials": {"jdbcUrl": "jdbc:mysql://127.0.0.1:3306/movies?user=root"}, "name": "movies-mysql"}]}
+
+
+echo "source ~/workspace/movie-fun-modernization/.env" >> ~/.bashrc
+When using command line to run the application, you will need to manually refresh the environment variables by running the following command.
+
+source ~/.bashrc
+
+
+cf create-service p.mysql db-small movies-database
+bind photo-storage service as well
+
+Create a user provided service called photo-storage.
+ Provide the S3 access_key_id, secret_access_key, bucket, and endpoint (the endpoint variable is not needed when using Amazon S3). Bind this service to your application.
+
+ ./gradlew modernizationMultipleJars -PmovieFunUrl=https://https://movie-fun-app-relaxed-jaguar.apps.evans.pal.pivotal.io
+
+ git push --set-upstream origin spring-bootification-work
