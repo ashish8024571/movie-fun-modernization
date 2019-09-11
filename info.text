@@ -1,0 +1,5 @@
+source ~/.bashrc
+
+./gradlew dependenciesGraph
+
+./gradlew modernizationMultipleJars -PmovieFunUrl=https://movie-fun-app-ashish-abhinav.apps.evans.pal.pivotal.io

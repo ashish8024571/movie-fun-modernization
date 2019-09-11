@@ -2,6 +2,7 @@ package org.superbiz.moviefun.blobstore;
 
 import org.apache.tika.Tika;
 import org.apache.tika.io.IOUtils;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.FileInputStream;
